@@ -27,6 +27,10 @@ The application source repository remains private. This repository intentionally
 - Deploy status and run ID, without private logs
 - Live-site screenshots when useful
 
+## Update Workflow
+
+Every private ClawExplorer.ai PR asks whether the change should be added here after merge. Only PRs marked "Yes" by the maintainer should be mirrored into this public changelog.
+
 ## What Does Not Get Published
 
 - Source code
