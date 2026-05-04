@@ -37,6 +37,27 @@ This file mirrors selected private pull requests as public release summaries. It
 - Screenshot:
   - [RSS feed response](assets/screenshots/rss-feed.png)
 
+### Combined Summary - ZIP search improvements (PRs #46-#50)
+
+- Included PRs:
+  - PR #50 - `[codex] bust app cache for ZIP nearest default`
+  - PR #49 - `[codex] default ZIP searches to nearest sort`
+  - PR #48 - `[codex] add nearest ZIP sort`
+  - PR #47 - `[codex] allow ZIP lookup in CSP`
+  - PR #46 - `[codex] add ZIP-aware event search`
+- Summary: Rolled out ZIP-aware event search on the homepage, including ZIP-to-city lookup, exact ZIP prioritization, city/state fallback for records without postal codes, a nearest-event sort mode, production CSP support for the ZIP lookup endpoint, default nearest behavior for ZIP searches, and a cache-bust so browsers loaded the shipped behavior.
+- Public production link:
+  - https://clawexplorer.ai/
+- Test results:
+  - `npm run check`: passed across the rollout PRs.
+  - Browser verification covered exact ZIP matches, city/state fallback, normal text search, unknown ZIP behavior, non-US 5-digit postal behavior, nearest sorting for ZIPs including `10001` and `94086`, and production behavior for `45219`.
+- Deploy result:
+  - All five PRs were merged by `romgenie` on 2026-05-04.
+  - Main deploy run IDs: `25302412682`, `25302487730`, `25302720438`, `25303056653`, `25303113011`
+  - Status: `success`
+- Screenshot:
+  - [Homepage events directory](assets/screenshots/homepage.png)
+
 ### PR #50 - Bust app cache for ZIP nearest default
 
 - Summary: Updated the homepage JavaScript cache key so production browsers load the ZIP search behavior shipped in PR #49.
