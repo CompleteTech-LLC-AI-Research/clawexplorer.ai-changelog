@@ -4,6 +4,20 @@ This file mirrors selected private pull requests as public release summaries. It
 
 ## 2026-05-04
 
+### PR #54 - Add new events RSS feed
+
+- Summary: Added `/new.xml`, a second RSS feed for recently added or verified events, while keeping `/feed.xml` focused on upcoming events by event date.
+- Public production links:
+  - https://clawexplorer.ai/new.xml
+  - https://clawexplorer.ai/
+- Test results:
+  - `npm run check`: passed before merge.
+  - Production verification confirmed `/new.xml` returns XML with 25 RSS items, an Atom self link, newest-first `pubDate` ordering, and homepage discovery/footer links.
+- Deploy result:
+  - Main deploy run ID: `25305717227`
+  - Status: `success`
+  - Completed: 2026-05-04
+
 ### PR #52 - Deploy events RSS feed
 
 - Summary: Updated the deployment path so the generated RSS feed is included in the public static artifact set and checked during deploy smoke tests.
